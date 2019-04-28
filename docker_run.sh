@@ -11,8 +11,8 @@
 # create a Docker volume: postgres
 # see: https://hub.docker.com/_/postgres
 ################################################################################
-docker run --detach=true --name postgres \
-    --env POSTGRES_PASSWORD=postgres24.27 \
+#    --env POSTGRES_PASSWORD=postgres24.27 \
+docker run --detach --name postgres \
     --publish 5432:5432/tcp \
     --mount 'type=volume,source=postgres-data,target=/var/lib/postgresql/data' \
     --network=ape \
