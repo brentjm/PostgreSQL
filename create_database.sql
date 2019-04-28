@@ -1,8 +1,10 @@
 begin;
-create table mytable
+create table qcmtable
 (
-    id integer not null,
-    message character varying(20)
+    timestamp bigint primary key,
+    username character varying(40),
+    experiment character varying(40),
+    frequency integer not null
 );
-create unique index on mytable (id);
+create unique index on qcmtable (id);
 commit;
