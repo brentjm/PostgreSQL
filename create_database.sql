@@ -6,5 +6,4 @@ create table qcmtable
     experiment character varying(40),
     frequency integer not null
 );
-create unique index on qcmtable (id);
 commit;
