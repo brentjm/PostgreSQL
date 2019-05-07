@@ -18,6 +18,9 @@ docker build -t postgres-custom .
 echo "Creating volume"
 docker volume create postgres-data
 
+echo "Creating volume"
+docker network create ape
+
 echo "Starting container"
 docker run --detach --name postgres \
     --publish 5432:5432/tcp \
