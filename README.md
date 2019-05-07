@@ -3,13 +3,12 @@ Setting up a PostgreSQL server in a Docker container.
 
 ## Getting started
 1. Clone this repository.
-2. Run the docker run script. Note that this will create a volume named *postgres-data* and
-a named network named *ape*.
+2. Run the docker run script.
 `$./docker_run.sh`
 
-## Complete container removal. Note that this will delete the volume name *postgres-data*,
-and the named network *ape*.
-1. run the docker_teardown script
+## Complete container removal.
+1. run the docker_teardown script. Note that this will delete the volume name *postgres-data*,
+a named network named *ape*.
 `$/./docker_teardown.sh`
 # Author
 
