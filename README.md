@@ -2,20 +2,21 @@
 Setting up a PostgreSQL server in a Docker container.
 
 ## Overview
-* *Dockerfile* will: 
+* *Dockerfile*: 
   * pull the latest postgres image [postgres](https://hub.docker.com/_/postgres)
   * define the postgres user, password and database
   * copy *create_database.sql* script that will run inside the container when first created
     * create a table *qcmtable*
     * create several columns inside *qcmtable*
 
-* docker_run.sh will:
+* *docker_run.sh*:
   * create named volume *postgres-data*
   * create named network *ape*
   * start the container 
     * detached mode
-    * publish the ports
-    * mount the volume
+    * publish the ports 5432
+    * mount the volume named *postgres-data*
+    * link the network *ape*
   * copy the *pg_hba.conf* file to the container
 
 * The file *example.json* is a Node-RED flow that demonstrates the insertion of data into the database.
